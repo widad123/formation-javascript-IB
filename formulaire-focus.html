@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Focus</title>
+    <script>
+        function vert(el){ 
+            console.log(el);
+            el.style.backgroundColor='lightgreen';
+        }
+        function blanc(el) {
+            el.style.backgroundColor='white';
+        }
+    </script>
+</head>
+<body>
+    <form name="f">
+       <input type="text" name="" id="" onfocus="vert(this);" onblur="blanc(this);">
+       <input type="text" name="" id="" onfocus="vert(this);" onblur="blanc(this);">
+       <input type="text" name="" id="" onfocus="vert(this);" onblur="blanc(this);">
+       <input type="text" name="" id="" onfocus="vert(this);" onblur="blanc(this);">
+       <input type="text" name="" id="" onfocus="vert(this);" onblur="blanc(this);">
+    </form>
+</body>
+</html>

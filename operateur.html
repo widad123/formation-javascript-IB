@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Opérateur</title>
+    <script>
+        function calculer(nombre1,nombre2){
+            var result;
+            r1=parseFloat(nombre1);
+            r2=parseFloat(nombre2);
+            result='Après l\'opération r1 += r2, r1 a pour valeur '+(r1+=r2)+'\n'
+                +'Après l\'opération r1 *= r2, r1 a pour valeur '+(r1*=r2)+'\n'
+                    +'Après l\'opération r1 /= r2, r1 a pour valeur '+(r1/=r2)+'\n'
+                        +'Après l\'opération r1 %= r2, r1 a pour valeur '+(r1%=r2)+'\n';
+
+                            f.resulta.value=result;
+        };
+       
+    </script>
+</head>
+<body>
+    <form name="f">
+      <div>
+        <label name="R1">Premier nombre réel R1</label>
+        <input type="text" name="nombre1" id="R1">
+      </div>
+      <div>
+        <label name="R2">Deuxième nombre réel R2</label>
+        <input type="text" name="nombre2" id="R2">
+      </div>
+      <div>
+        <input type="button" value="Calcul" onclick="calculer(f.nombre1.value,f.nombre2.value);">
+    </div>
+    <p>Resultats</p>
+    <div>
+        <textarea style="width: 80%;" name="resulta" id="resulta" cols="30" rows="10">
+        </textarea>
+    </div>
+    </form>
+    
+</body>
+</html>

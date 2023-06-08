@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Déplacer une image</title>
+    <script>
+        function deplace(val){
+            var i = document.getElementById('img');
+            i.style.marginLeft=val+'rem';
+        }
+    </script>
+</head>
+<body>
+    <a href="javascript:deplace(20);">Déplacer l'image à 20 rem</a>
+    <a href="#" onclick="deplace(50);">Déplacer l'image à 30 rem</a>
+    <img src="img/paysage.jpg" alt="paysage" id="img" >
+</body>
+</html>

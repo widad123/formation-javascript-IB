@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Boucle for</title>
+    <script>
+        function init(){
+            document.write('<pre>');
+            for (let index = 32; index <= 255; index++) {
+                if(index%16==0){
+                   document.write('<br>')
+                }
+                document.write('&#'+index+'; ');
+            } 
+            document.write('</pre>');
+        }
+    </script>
+</head>
+<body onload="init()">
+</body>
+</html>

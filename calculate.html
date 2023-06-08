@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate</title>
+    <script>
+        function calculer(chaine){
+            var result= eval(chaine);
+            f.chaine.value=result;
+        };
+    </script>
+</head>
+<body>
+    <form name="f">
+        <input type="text" name="chaine" id="chaine">
+        <input type="button" value="calcule" onclick="calculer(f.chaine.value);">
+    </form>
+</body>
+</html>

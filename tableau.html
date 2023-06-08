@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau</title>
+    <script>
+        var prenoms =['Jean','Pierre','Laetitia','David','Jade','Christel'];
+        document.write(prenoms+'<br>');
+        prenoms.splice(1,0,"Anais");
+        document.write(prenoms+'<br>');
+        prenoms.pop();
+        document.write(prenoms+'<br>');
+        prenoms.unshift('Christel');
+        document.write(prenoms+'<br>');
+        prenoms.push('Sandrine');
+        document.write(prenoms+'<br>');
+        prenoms.sort();
+        document.write(prenoms+'<br>');
+        var premiers = prenoms.slice(0,3);
+        document.write(premiers+'<br>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

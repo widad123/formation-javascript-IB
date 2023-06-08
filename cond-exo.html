@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Majuscule minuscule ou autre</title>
+    <script>
+      function message() {
+        var c = f.car.value;
+        if (c!='') {
+          if (c.toUpperCase() == c.toLowerCase()) {
+            console.log('Le caractère entré n\'est pas une lettre');
+          }
+          else if (c.toLowerCase() == c) {
+            console.log('Vous avez entré une minuscule');
+          }
+          else {
+            console.log('Vous avez entré une majuscule');      
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="f">
+      <label>Entrez une lettre</label>
+      <input type="text" name="car" maxlength="1" onkeyup="message();" autofocus>
+    </form>
+  </body>
+</html>

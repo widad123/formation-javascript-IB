@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Change image</title>
+    <script>
+        function change(el) {
+            var image=el.getAttribute('src');
+            if(image=='img/paysage.jpg'){
+                el.setAttribute('src','img/mer.jpg');
+            }else{
+                el.setAttribute('src','img/paysage.jpg');
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="img/paysage.jpg" id="img1" onclick="change(this)">
+    <img src="img/mer.jpg" id="img2" onclick="change(this)">
+</body>
+</html>

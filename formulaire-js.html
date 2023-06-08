@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+    <script>
+        function majuscul(chaine){
+            f.email.value=chaine.toUpperCase();
+        };
+    </script>
+</head>
+<body>
+    <form action="" name="f">
+    <div>
+        <label1>Entrez votre nom</label1>
+        <input type="text" name="nom" id="nom">
+    </div>
+    <div>
+        <label1>Entrez votre Adresse email</label1>
+        <input type="text" name="email" id="email">
+    </div>
+    <div>
+        <label1>Connaissez-vous Mediaforma</label1>
+        <label1>Oui</label1>
+        <input type="radio" name="ouinon" id="oui">
+        <label1>Non</label1>
+        <input type="radio" name="ouinon" id="non">
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Envoyer">
+        <input type="reset" name="annuler" value="Annuler">
+        <input type="button" name="majuscule" value="Majuscule" onclick="majuscul(f.email.value);">
+    </div>
+</form>
+</body>
+</html>
