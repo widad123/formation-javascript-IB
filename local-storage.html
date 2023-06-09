@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Stockage local HTML</title>
+    <style>
+        input{
+            margin:1rem;
+        }
+    </style>
+    <script>
+        function enregistre(){
+            var c= f.nom.value;
+            var v= f.valeur.value;
+            localStorage.setItem(c,v);
+            tableau();
+        };
+        function lit(){
+            var c= f.nom.value;
+            f.valeur.value=localStorage.getItem(c);
+            tableau();
+        };
+        function effacetout(){
+            localStorage.clear();
+            tableau();
+        };
+        function efface() {
+            var c= f.nom.value;
+            localStorage.removeItem(c);
+            tableau();
+        };
+        function tableau(){
+            var contenu = '<tr><th>Clé</th><th>Valeur</th></tr>';
+            for (let i = 0; i < localStorage.length; i++) {
+                var c = localStorage.key(i);
+                var v = localStorage.getItem(c);
+                contenu+='<tr><td>'+c+'</td><td>'+v+'</td></tr>';
+            }
+            document.querySelector('table').innerHTML = contenu;
+        };
+    </script>
+</head>
+<body onload="tableau();">
+    <h1>Stockage local HTML5</h1>
+        <h2>Entrez la donnée à stocker</h2>
+        <form action="" name="f">
+        <div>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" placeholder="deuxième">
+        </div>
+        <div>
+            <label for="donne">Donné</label>
+            <textarea name="valeur" id="valeur" cols="30" rows="10"></textarea>        
+        </div>
+        <div>
+            <input type="button" value="Lit" onclick="lit();">
+            <input type="button" value="Enregistre" onclick="enregistre();">
+            <input type="button" value="Efface" onclick="efface();">
+            <input type="button" value="Efface tout" onclick="effacetout();">
+        </div>
+        </form>
+        <table border>
+
+        </table>
+</body>
+</html>

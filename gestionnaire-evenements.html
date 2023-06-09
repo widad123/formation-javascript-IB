@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionnaire evenements</title>
+    <script>
+        function direBonjour(){
+            alert('Bonjour');
+        }
+        function onbtn(){
+          var el= document.getElementById('bonjour');
+          el.addEventListener('click',direBonjour);
+        }
+        function offbtn(){
+            var el=document.getElementById("bonjour");
+            el.removeEventListener('click',direBonjour);
+        }
+    </script>
+</head>
+<body>
+    <button id="on" onclick="onbtn(this)">On</button>
+    <button id="off" onclick="offbtn(this)">Off</button>
+    <button id="bonjour">Bonjour</button>
+</body>
+</html>

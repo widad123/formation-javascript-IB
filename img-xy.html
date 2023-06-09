@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/proto.js"></script>
+    <script>
+        function coord(e){
+           // console.log(e);
+        var el = document.querySelector("div");
+        el.innerHTML = e.pageX +' , '+ e.pageY +'px';
+        }
+    </script>
+</head>
+<body>
+    <img src="img/paysage2.jpg" alt="paysage" onmousemove="coord(event);">
+    <div></div>
+    <div>
+        <script>
+            var nb=20;
+            if (nb.even()==false) {
+                console.log('le nombre est impair');
+            } else {
+                console.log('le nombre est pair');
+            };
+
+            var chaine="phrase";
+            document.write(chaine.toCapitalize());
+        </script>
+    </div>
+</body>
+</html>
