@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Base de données</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        
+    </script>
+    <style>
+        div{
+            width: 20rem;
+            height: 20rem;
+            border: .1rem black solid;
+            padding: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            $('#b1').click(function(){
+                $('div').load('lecture.php');
+            });
+        });
+    </script>
+    <div></div>
+    <button id="b1">lecture dans la base de données</button>
+</body>
+</html>

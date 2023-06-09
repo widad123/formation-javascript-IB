@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>regexp</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+        function tester(){
+            var ex = new RegExp('^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$');
+            if(ex.test(f.mail.value)){
+                document.querySelector('div').innerHTML="Adresse correcte";
+            }else{
+                document.querySelector('div').innerHTML="Adresse incorrecte";
+            }
+        }
+    </script>
+   <form name="f">
+    <input type="text" name="mail" id="mail">
+    <input type="button" value="Tester l'adresse email" onclick="tester();">
+   </form>
+   <div></div>
+</body>
+</html>
